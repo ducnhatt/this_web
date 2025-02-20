@@ -1,0 +1,178 @@
+body {
+  font-family: "Arial", sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #ffe6f2;
+  color: #ff4081;
+}
+
+.game-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+}
+
+.puzzle-board {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  grid-template-rows: repeat(3, 100px);
+  gap: 2px;
+  background: white;
+  padding: 5px;
+  border: 2px solid #ff4081;
+}
+
+.puzzle-piece {
+  width: 100px;
+  height: 100px;
+  cursor: grab;
+  background-size: 300px 300px;
+  border: 1px solid #ff4081;
+}
+
+button {
+  margin-top: 20px;
+  padding: 10px 15px;
+  font-size: 16px;
+  background: #ff4081;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #ff1a5b;
+}
+header {
+  text-align: center;
+  padding: 20px;
+  background: #ff80ab;
+  color: #fff;
+  font-size: 2rem;
+}
+
+/* Slideshow */
+.slideshow-container {
+  max-width: 50%; /* Giới hạn chiều rộng */
+  max-height: 450%; /* Định chiều cao cố định */
+  margin: 20px auto;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.slides {
+  display: none;
+  width: 100%;
+  height: 100%;
+  animation: fadeEffect 1s ease-in-out;
+}
+
+@keyframes fadeEffect {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.slides img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.caption {
+  text-align: center;
+  font-size: 1.2rem;
+  margin: 10px 0;
+}
+
+/* Nút chuyển ảnh */
+.prev,
+.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  font-size: 24px;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Dấu chấm */
+.dots {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.dots span {
+  height: 10px;
+  width: 10px;
+  margin: 0 5px;
+  background-color: #f06593;
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.dots span.active {
+  background-color: #fff;
+}
+
+/* Gallery */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 15px;
+  padding: 20px;
+}
+
+.gallery img {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+}
+
+/* Kỷ niệm */
+.memories {
+  text-align: center;
+  padding: 20px;
+  background: #ffc1e3;
+  margin: 20px;
+  border-radius: 10px;
+}
+
+.memories h2 {
+  margin-bottom: 10px;
+}
+
+.memories p {
+  font-size: 1.1rem;
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Will You Be My Valentine?</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <audio id="background-music" autoplay loop muted>
+      <source src="chamemmotdoi.mp3" type="audio/mp3" />
+      Trình duyệt của bạn không hỗ trợ audio.
+    </audio>
+    <div class="container">
+      <h1>Em đã sẵn sàng xem lại kỷ niệm của đôi ta chưa</h1>
+      <div class="buttons">
+        <button class="yes-button" onclick="handleYesClick()">dạaa</button>
+        <button class="no-button" onclick="handleNoClick()">khonggg</button>
+      </div>
+      <div class="gif_container">
+        <img
+          src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExdW1pdXhwaXE3anU0bjR0YXZ1emY1ZmlycnY2eGt2YTdyaWl0aDBxbiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/fvN5KrNcKKUyX7hNIA/giphy.gif"
+          alt="Cute GIF"
+        />
+      </div>
+    </div>
+    <script src="main_script.js"></script>
+    <script>
+      window.addEventListener("load", function () {
+        const audio = document.getElementById("background-music");
+
+        // Nếu trình duyệt không tự động phát, hiển thị thông báo
+        if (audio.paused) {
+          document.body.addEventListener(
+            "click",
+            () => {
+              audio.muted = false;
+              audio.play();
+            },
+            { once: true }
+          ); // Chỉ chạy một lần
+        } else {
+          audio.muted = false;
+        }
+      });
+    </script>
+  </body>
+</html>

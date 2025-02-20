@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kỷ niệm với người yêu</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>Những kỷ niệm của Lớn và Nhỏ 💖</header>
+
+    <!-- Slideshow -->
+    <div class="slideshow-container">
+      <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+      <div class="slides">
+        <img src="image/url5.jpg" alt="Kỷ niệm 1" />
+        <div class="caption">
+          Bức ảnh đầu tiên chụp với nhau, thực ra ngại lắm nhưng ra dáng đàn ông
+          nên phải chụp
+        </div>
+      </div>
+      <div class="slides">
+        <img src="image/url6.jpg" alt="Kỷ niệm 2" />
+        <div class="caption">Đi làm vòng tay đôi ne</div>
+      </div>
+      <div class="slides">
+        <img src="image/url3.jpg" alt="Kỷ niệm 3" />
+        <div class="caption">photobooth đầu tiên với nhauu</div>
+      </div>
+      <div class="slides">
+        <img src="image/url10.jpg" alt="Kỷ niệm 3" />
+        <div class="caption">đi date nè, một buổi chiều chill</div>
+      </div>
+
+      <div class="slides">
+        <img src="image/url11.jpg" alt="Kỷ niệm 3" />
+        <div class="caption">Đi chơi Tết ở Kỳ Anh cùng Thỉ</div>
+      </div>
+      <div class="slides">
+        <img src="image/url12.jpg" alt="Kỷ niệm 3" />
+        <div class="caption">Vẫn là đi chơi Tết</div>
+      </div>
+      <div class="slides">
+        <img src="image/url4.jpg" alt="Kỷ niệm 3" />
+        <div class="caption">
+          14/02/2024: ngày tỏ tình, rất là run và may mắn là đã có nhau(lần đầu
+          cầm tay ngại vải)
+        </div>
+      </div>
+      <div class="slides">
+        <img src="image/url2.jpg" alt="Kỷ niệm 3" />
+        <div class="caption">đẹp đôi quá</div>
+      </div>
+
+      <button class="next" onclick="changeSlide(1)">&#10095;</button>
+
+      <div class="dots">
+        <span onclick="currentSlide(1)"></span>
+        <span onclick="currentSlide(2)"></span>
+        <span onclick="currentSlide(3)"></span>
+      </div>
+    </div>
+
+    <!-- Gallery -->
+    <section class="gallery">
+      <img src="image/url1.jpg" alt="Ảnh 1" onclick="startGame(this)" />
+      <img src="image/url2.jpg" alt="Ảnh 2" onclick="startGame(this)" />
+      <img src="image/url13.jpg" alt="Ảnh 2" onclick="startGame(this)" />
+      <img src="image/url4.jpg" alt="Ảnh 4" onclick="startGame(this)" />
+      <img src="image/url5.jpg" alt="Ảnh 5" onclick="startGame(this)" />
+      <img src="image/url6.jpg" alt="Ảnh 6" onclick="startGame(this)" />
+      <img src="image/url7.jpg" alt="Ảnh 1" onclick="startGame(this)" />
+      <img src="image/url8.jpg" alt="Ảnh 2" onclick="startGame(this)" />
+      <img src="image/url9.jpg" alt="Ảnh 3" onclick="startGame(this)" />
+      <img src="image/url10.jpg" alt="Ảnh 4" onclick="startGame(this)" />
+      <img src="image/url11.jpg" alt="Ảnh 5" onclick="startGame(this)" />
+      <img src="image/url12.jpg" alt="Ảnh 6" onclick="startGame(this)" />
+      <img src="image/url3.jpg" alt="Ảnh 3" onclick="startGame(this)" />
+    </section>
+
+    <!-- Kỷ niệm -->
+    <section class="memories">
+      <h2>Kỷ niệm đặc biệt 💞</h2>
+      <p>
+        Mỗi ngày gặp nhau là một niềm vui, mỗi giây phút đôi mình bên nhau đều
+        là một kỷ niệm không thể quên, Yêu em nhiềuu💕
+      </p>
+    </section>
+
+    <!-- Nhạc nền -->
+    <audio autoplay loop>
+      <source src="chamemmotdoi.mp3" type="audio/mpeg" />
+      Trình duyệt của bạn không hỗ trợ phát nhạc.
+    </audio>
+
+    <script src="script.js"></script>
+    <script>
+      function startGame(img) {
+        console.log("Ảnh được chọn:", img.src); // Debug
+        localStorage.setItem("selectedImage", img.src); // Lưu ảnh vào localStorage
+        window.location.href = "game.html"; // Chuyển sang trang game
+      }
+    </script>
+  </body>
+</html>

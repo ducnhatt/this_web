@@ -1,0 +1,76 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background: url("url.jpg") no-repeat center center/cover;
+  font-family: "Pacifico", cursive;
+  flex-direction: column;
+  position: relative;
+}
+
+/* Lớp phủ để làm mờ */
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3); /* Lớp màu tối nhẹ */
+  backdrop-filter: blur(3px); /* Hiệu ứng làm mờ */
+  z-index: -1;
+}
+
+.container {
+  text-align: center;
+  position: relative; /* Để no-button di chuyển trong container */
+  width: 80vw; /* Tăng chiều rộng để có thêm không gian */
+  height: 50vh; /* Tăng chiều cao để nút có thể di chuyển */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+h1 {
+  font-size: 3.5em;
+  color: #3b2a2a;
+}
+
+.buttons {
+  margin-top: 20px;
+}
+
+.yes-button,
+.no-button {
+  font-family: "Pacifico", cursive;
+  background-color: #f9e3e3; /* Màu nền */
+  font-size: 2em; /* Tăng kích thước chữ */
+  padding: 15px 30px; /* Tăng kích thước nút */
+  border: none;
+  border-radius: 13px;
+  cursor: pointer;
+  transition: all 0.3s ease; /* Hiệu ứng mượt mà */
+}
+
+/* Màu khi di chuột vào nút "Yes" */
+.yes-button:hover {
+  background-color: #f073ad;
+  transform: scale(1.1); /* Phóng to nhẹ */
+  box-shadow: 0 0 10px rgba(221, 115, 195, 0.8);
+}
+
+/* Màu khi di chuột vào nút "No" */
+.no-button:hover {
+  background-color: #d32f2f;
+  transform: scale(1.1); /* Phóng to nhẹ */
+  box-shadow: 0 0 10px rgba(211, 47, 47, 0.8);
+}
+
+.gif_container img {
+  max-width: 70%;
+  height: auto;
+  border-radius: 10px;
+  margin-top: 160px;
+}
